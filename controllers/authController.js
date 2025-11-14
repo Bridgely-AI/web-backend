@@ -3,32 +3,49 @@ const jwt = require('jsonwebtoken')
 const path = require('path')
 const fs = require('fs')
 
-const SECRET_KEY = process.env.SECRET_KEY;
+const SECRET_KEY = process.env.SECRET_KEY
 const dataUsers = path.join(__dirname, '../data/users.json')
 const dataCompanies = path.join(__dirname, '../data/Companies.json')
 
-const consultUsers = (type) => {
-   let data = null
-   if (type == 'user') { data = fs.readFileSync(dataUsers, 'utf-8') }
-   else if (type == 'company') { data = fs.readFileSync(dataCompanies, 'utf-8') }
+const consultData = (type) => {
+   const filePath = type === 'user' ? dataUsers : dataCompanies
 
-   if (!data || data.trim() === "") {
-      return [];
-   }
    try {
-      return JSON.parse(data);
-   } catch (error) {
-      console.error("Erro ao analisar usuários: ", error);
-      return [];
+      data = fs.readFileSync(filePath, 'utf-8')
+      if (!data || data.trim() === "") {
+         return []
+      }
+      return JSON.parse(data)
+   }
+   catch (error) {
+      if (error.code === 'ENOENT') {
+         return []
+      }
+      console.error(`Erro ao analisar dados ${type}: `, error)
+      return []
    }
 }
-const saveUsers = (users, type) => {
-   let data = null
-   if (type == 'user') { data = fs.readFileSync(dataUsers, 'utf-8') }
-   else if (type == 'company') { data = fs.readFileSync(dataCompanies, 'utf-8') }
-
-   fs.writeFileSync(data, JSON.stringify(users, null, 2))
+const saveData = (dataList, type) => {
+   const filePath = type === 'user' ? dataUsers : dataCompanies
+   fs.writeFileSync(filePath, JSON.stringify(dataList, null, 2))
 }
+const checkDuplicatesAndGetData = (type, reqBody) => {
+   const dataList = consultData(type)
+
+   if (type == 'user') {
+      if (dataList.find(user => user.phoneNumber === reqBody.phoneNumber)) {
+         return { error: 'Esse número de telefone já está sendo usado!' }
+      }
+   }
+   else if (type == 'company') {
+      if (dataList.find(company => company.cnpj === reqBody.cnpj)) {
+         return { error: 'Esse CNPJ já está sendo usado!' }
+      }
+   }
+
+   return { dataList }
+}
+
 
 exports.register = async (req, res) => {
    const {
@@ -37,56 +54,31 @@ exports.register = async (req, res) => {
       email,
       password,
       confirmPassword,
-      location,
-      phoneNumber = "",
-      cnpj = ""
+      phoneNumber,
+      cnpj
    } = req.body
 
-   if (!type || !name || !email || !password || !confirmPassword || !location || !phoneNumber) {
+   if (!type || !name || !email || !password || !confirmPassword) {
       return res.status(400).json({ message: 'Required fields' })
    }
 
-   let users = null
-   if (type == 'user') {
-      users = consultUsers('user')
-      if (users.find(user => user.phoneNumber == phoneNumber)) {
-         return res.status(400).json({ message: 'Esse número de telefone já está sendo usado!' })
-      }
+   if (type === 'user' && !phoneNumber) {
+      return res.status(400).json({ message: 'Número de telefone é obrigatório para usuários.' })
    }
-   else if (type == 'company') {
-      users = consultUsers('company')
-      if (users.find(user => user.cnpj == cnpj)) {
-         return res.status(400).json({ message: 'Esse cnpj já está sendo usado!' })
-      }
+   if (type === 'company' && !cnpj) {
+      return res.status(400).json({ message: 'CNPJ é obrigatório para empresas.' })
    }
-
-   if (users.find(user => user.name == name)) {
-      return res.status(400).json({ message: 'Esse nome já está sendo usado!' })
-   }
-   if (password != confirmPassword) {
+   if (password !== confirmPassword) {
       return res.status(400).json({ message: 'As senhas não se coincidem' })
    }
 
-   const hashPassword = await bcrypt.hash(password, 10)
-   const newUser = {
-      id: Date.now(),
-      type,
-      name,
-      email,
-      password: hashPassword,
-      phoneNumber,
-      photo: 'http://localhost:5002/userImages/userPhotoPlaceholder.png',
-      description: '',
-      location: '',
-      hardSkills: [],
-      softSkills: [],
-      hobbies: [],
-      academicBackground: [],
-      experiences: [],
-      recomendations: 0,
-      receivedMessages: [],
+   const { error, dataList } = checkDuplicatesAndGetData(type, req.body)
+   if (error) {
+      return res.status(400).json({ message: error })
    }
-   const newCompany = {
+
+   const hashPassword = await bcrypt.hash(password, 10)
+   const baseProfile = {
       id: Date.now(),
       type,
       name,
@@ -96,17 +88,114 @@ exports.register = async (req, res) => {
       photo: 'http://localhost:5002/userImages/userPhotoPlaceholder.png',
       description: '',
       location: '',
-      website: '',
-      area: '',
-      cnpj: '',
-      jobs: [],
-      futureJobs: [],
       recomendations: 0,
       receivedMessages: [],
    }
 
-   if (type == 'user') { users.push(newUser) }
-   else if (type == 'company') { users.push(newCompany) }
-   saveUsers(users, type)
+   let newProfile
+   if (type === 'user') {
+      newProfile = { ...baseProfile, hardSkills: [], softSkills: [], hobbies: [], academicBackground: [], experiences: [], }
+   }
+   else if (type === 'company') {
+      newProfile = { ...baseProfile, website: '', area: '', cnpj, jobs: [], futureJobs: [], }
+   }
+   else {
+      return res.status(400).json({ message: 'Tipo de usuário inválido.' })
+   }
+
+   dataList.push(newProfile)
+   saveData(dataList, type)
    res.status(200).json({ message: 'Usuario registrado com sucesso!' })
+}
+exports.login = async (req, res) => {
+   const { userName, password } = req.body
+   const allUsers = [...consultData('user'), ...consultData('company')]
+
+   let user = allUsers.find(user => user.email === userName || user.name === userName)
+   if (!user) {
+      return res.status(400).json({ message: 'Usuário não cadastrado!' })
+   }
+
+   const validPassword = await bcrypt.compare(password, user.password)
+   if (!validPassword) {
+      return res.status(400).json({ message: 'Senha incorreta!' })
+   }
+
+   const token = jwt.sign({ id: user.id, email: user.email, type: user.type }, SECRET_KEY)
+   res.json({ message: 'login successful', token })
+}
+exports.getProfile = async (req, res) => {
+   const userId = req.user.id
+
+   const regularUsers = consultData('user')
+   const companies = consultData('company')
+
+   const user = regularUsers.find(user => user.id == userId || user.id == parseInt(userId)) ||
+      companies.find(company => company.id == userId || company.id == parseInt(userId))
+
+   if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' })
+   }
+
+   const { password, ...profile } = user
+
+   return res.status(200).json({ user: profile })
+}
+exports.getUserById = (req, res) => {
+   const targetId = parseInt(req.params.id)
+   const regularUsers = consultData('user')
+   const companies = consultData('company')
+
+   const user = regularUsers.find(user => user.id === targetId) ||
+                companies.find(company => company.id === targetId)
+
+   if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+   }
+
+   const publicProfile = {
+      id: user.id,
+      name: user.name,
+      type: user.type,
+      location: user.location,
+      photo: user.photo,
+      description: user.description,
+   }
+
+   return res.status(200).json({ user: publicProfile })
+}
+exports.updateProfile = (req, res) => {
+   const targetId = parseInt(req.params.id)
+   const userIdFromToken = req.user.id
+   const userTypeFromToken = req.user.type
+
+   const updates = req.body
+   
+   if (targetId != parseInt(userIdFromToken)) {
+      return res.status(403).json({ message: 'Você não tem permissão para editar este perfil.' })
+   }
+   
+   let dataList = consultData(userTypeFromToken)
+   const userIndex = users.findIndex(user => user.id == targetId)
+
+   if (userIndex === -1) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+   }
+
+   const currentUserData = dataList[userIndex]
+
+   const updatedUser = {
+      ...currentUserData,
+      ...protectedUpdates,
+      id: currentUserData.id,
+      email: currentUserData.email,
+      password: currentUserData.password,
+      type: currentUserData.type,
+   }
+   
+   dataList[userIndex] = updatedUser
+   saveData(dataList, userTypeFromToken)
+   const { password, ...responseProfile } = updatedUser
+    
+   res.status(200).json({ message: 'Perfil atualizado com sucesso', user: responseUser})
 }

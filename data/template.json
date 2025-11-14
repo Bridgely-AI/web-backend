@@ -1,0 +1,43 @@
+{
+  id: "",
+  type: "",
+  name: "",
+  email: "",
+  password: "",
+  description: "",
+  location: "",
+  hardSkills: [],
+  softSkills: [],
+  hobbies: [],
+  academicBackground: [
+    { course: "", institution: "", year: }
+  ],
+  experiences: [
+    { role: "", company: "", period: "" }
+  ],
+  recommendations: 0,
+  receivedMessages: [
+    { userId: "", message: "" }
+  ]
+}
+
+
+{
+  id: ""	
+  type: "",
+  name: "",
+  email: "",
+  password: "",
+  description: "",
+  location: "",
+  website: "",
+  area: "",
+  cnpj: "",
+  jobs: [
+    { title: "", description: "", link: "" },
+  ],
+  futureJobs: [
+    { title: "", description: "", link: "", expectedDate: "" },
+  ],
+  recommendations: 
+}
