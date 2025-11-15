@@ -48,64 +48,75 @@ const checkDuplicatesAndGetData = (type, reqBody) => {
 
 
 exports.register = async (req, res) => {
-   const {
-      type,
-      name,
-      email,
-      password,
-      confirmPassword,
-      phoneNumber,
-      cnpj
-   } = req.body
-
-   if (!type || !name || !email || !password || !confirmPassword) {
-      return res.status(400).json({ message: 'Required fields' })
+   try {
+      const {
+         type,
+         name,
+         email,
+         password,
+         confirmPassword,
+         phoneNumber,
+         cnpj,
+         location,
+      } = req.body
+      let profilePicture
+   
+      if (!type || !name || !email || !password || !confirmPassword) {
+         return res.status(400).json({ message: 'Campos obrigatórios!', a: [type, name, email, password, confirmPassword] })
+      }
+   
+      if (type === 'user' && !phoneNumber) {
+         return res.status(400).json({ message: 'Número de telefone é obrigatório para usuários.' })
+      }
+      if (type === 'company' && !cnpj) {
+         return res.status(400).json({ message: 'CNPJ é obrigatório para empresas.' })
+      }
+      if (password !== confirmPassword) {
+         return res.status(400).json({ message: 'As senhas não se coincidem' })
+      }
+      if (req.file) {
+         profilePicture = `http://localhost:5002/userImages/${req.file.filename}`
+      } else {
+         profilePicture = `http://localhost:5002/userImages/userPhotoPlaceholder.png`
+      }
+   
+      const { error, dataList } = checkDuplicatesAndGetData(type, req.body)
+      if (error) {
+         return res.status(400).json({ message: error })
+      }
+   
+      const hashPassword = await bcrypt.hash(password, 10)
+      const baseProfile = {
+         id: Date.now(),
+         type: type,
+         name: name,
+         email: email,
+         password: hashPassword,
+         location: location,
+         photo: profilePicture,
+         description: '',
+         recomendations: 0,
+         receivedMessages: [],
+      }
+   
+      let newProfile
+      if (type === 'user') {
+         newProfile = { ...baseProfile, phoneNumber: phoneNumber, hardSkills: [], softSkills: [], hobbies: [], academicBackground: [], experiences: [], }
+      }
+      else if (type === 'company') {
+         newProfile = { ...baseProfile, website: '', area: '', cnpj, jobs: [], futureJobs: [], }
+      }
+      else {
+         return res.status(400).json({ message: 'Tipo de usuário inválido.' })
+      }
+   
+      dataList.push(newProfile)
+      saveData(dataList, type)
+      res.status(200).json({ message: 'Usuario registrado com sucesso!' })
    }
-
-   if (type === 'user' && !phoneNumber) {
-      return res.status(400).json({ message: 'Número de telefone é obrigatório para usuários.' })
+   catch (error) {
+      return res.status(500).json({ message: 'Erro interno ao processar o registro.' })
    }
-   if (type === 'company' && !cnpj) {
-      return res.status(400).json({ message: 'CNPJ é obrigatório para empresas.' })
-   }
-   if (password !== confirmPassword) {
-      return res.status(400).json({ message: 'As senhas não se coincidem' })
-   }
-
-   const { error, dataList } = checkDuplicatesAndGetData(type, req.body)
-   if (error) {
-      return res.status(400).json({ message: error })
-   }
-
-   const hashPassword = await bcrypt.hash(password, 10)
-   const baseProfile = {
-      id: Date.now(),
-      type,
-      name,
-      email,
-      password: hashPassword,
-      phoneNumber,
-      photo: 'http://localhost:5002/userImages/userPhotoPlaceholder.png',
-      description: '',
-      location: '',
-      recomendations: 0,
-      receivedMessages: [],
-   }
-
-   let newProfile
-   if (type === 'user') {
-      newProfile = { ...baseProfile, hardSkills: [], softSkills: [], hobbies: [], academicBackground: [], experiences: [], }
-   }
-   else if (type === 'company') {
-      newProfile = { ...baseProfile, website: '', area: '', cnpj, jobs: [], futureJobs: [], }
-   }
-   else {
-      return res.status(400).json({ message: 'Tipo de usuário inválido.' })
-   }
-
-   dataList.push(newProfile)
-   saveData(dataList, type)
-   res.status(200).json({ message: 'Usuario registrado com sucesso!' })
 }
 exports.login = async (req, res) => {
    const { userName, password } = req.body
@@ -141,13 +152,13 @@ exports.getProfile = async (req, res) => {
 
    return res.status(200).json({ user: profile })
 }
-exports.getUserById = (req, res) => {
+exports.getUserById = async (req, res) => {
    const targetId = parseInt(req.params.id)
    const regularUsers = consultData('user')
    const companies = consultData('company')
 
    const user = regularUsers.find(user => user.id === targetId) ||
-                companies.find(company => company.id === targetId)
+      companies.find(company => company.id === targetId)
 
    if (!user) {
       return res.status(404).json({ message: 'Usuário não encontrado.' });
@@ -158,23 +169,23 @@ exports.getUserById = (req, res) => {
       name: user.name,
       type: user.type,
       location: user.location,
-      photo: user.photo,
+      profilePicture: user.profilePicture,
       description: user.description,
    }
 
    return res.status(200).json({ user: publicProfile })
 }
-exports.updateProfile = (req, res) => {
+exports.updateProfile = async (req, res) => {
    const targetId = parseInt(req.params.id)
    const userIdFromToken = req.user.id
    const userTypeFromToken = req.user.type
 
    const updates = req.body
-   
+
    if (targetId != parseInt(userIdFromToken)) {
       return res.status(403).json({ message: 'Você não tem permissão para editar este perfil.' })
    }
-   
+
    let dataList = consultData(userTypeFromToken)
    const userIndex = users.findIndex(user => user.id == targetId)
 
@@ -192,10 +203,10 @@ exports.updateProfile = (req, res) => {
       password: currentUserData.password,
       type: currentUserData.type,
    }
-   
+
    dataList[userIndex] = updatedUser
    saveData(dataList, userTypeFromToken)
    const { password, ...responseProfile } = updatedUser
-    
-   res.status(200).json({ message: 'Perfil atualizado com sucesso', user: responseUser})
+
+   res.status(200).json({ message: 'Perfil atualizado com sucesso', user: responseUser })
 }

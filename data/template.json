@@ -1,11 +1,12 @@
 {
   id: "",
-  type: "",
-  name: "",
-  email: "",
-  password: "",
+  type: "", V
+  name: "", V
+  email: "", V
+  phoneNumber: "", V
+  password: "", V
   description: "",
-  location: "",
+  location: "", V
   hardSkills: [],
   softSkills: [],
   hobbies: [],
@@ -24,15 +25,15 @@
 
 {
   id: ""	
-  type: "",
-  name: "",
-  email: "",
-  password: "",
+  type: "", V
+  name: "", V
+  email: "", V
+  password: "", V
   description: "",
-  location: "",
+  location: "", V
   website: "",
-  area: "",
-  cnpj: "",
+  area: "", V
+  cnpj: "", V
   jobs: [
     { title: "", description: "", link: "" },
   ],

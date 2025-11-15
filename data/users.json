@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1763250819227,
+    "type": "user",
+    "name": "João Pedro Raimundo Marcilio",
+    "email": "jp.marcilio2@gmail.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "São Paulo - SP",
+    "photo": "http://localhost:5002/userImages/1763250818994-blob",
+    "description": "",
+    "recomendations": 0,
+    "receivedMessages": [],
+    "phoneNumber": "11948692771",
+    "hardSkills": [],
+    "softSkills": [],
+    "hobbies": [],
+    "academicBackground": [],
+    "experiences": []
+  }
+]
