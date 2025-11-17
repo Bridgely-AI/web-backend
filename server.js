@@ -11,6 +11,7 @@ const port = process.env.PORT || 5002
 app.use(cors())
 app.use(express.json())
 
+app.use('/userImages', express.static(path.join(__dirname, 'public', 'userImages')))
 app.use('/', authRoutes)
 
 app.listen(port, () => {

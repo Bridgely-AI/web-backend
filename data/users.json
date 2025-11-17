@@ -1,15 +1,91 @@
 [
   {
-    "id": 1763250819227,
+    "id": 1790123456789,
     "type": "user",
-    "name": "João Pedro Raimundo Marcilio",
-    "email": "jp.marcilio2@gmail.com",
-    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
-    "location": "São Paulo - SP",
-    "photo": "http://localhost:5002/userImages/1763250818994-blob",
-    "description": "",
-    "recomendations": 0,
+    "name": "Mariana Souza Silva",
+    "email": "mariana.silva@exemplo.com",
+    "password": "$2b$10$uA3nK8gH7bC9lW3pX2yT5OaQz1FmM4sR6vI0eJdF8pG7qH6iK5jL",
+    "location": "Belo Horizonte - MG",
+    "photo": "http://localhost:5002/userImages/userPhotoPlaceholder.png",
+    "description": "Engenheira de Software Full Stack com 5 anos de experiência em desenvolvimento de aplicações escaláveis usando React e Node.js. Foco em otimização de performance e metodologias Ágeis.",
+    "recommendations": {
+      "count": 0,
+      "users": []
+    },
+    "actualArea": "Desenvolvedora Full Stack",
     "receivedMessages": [],
+    "phoneNumber": "31987654321",
+    "hardSkills": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "AWS",
+      "MongoDB",
+      "Docker"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Liderança Técnica",
+      "Resolução de Problemas",
+      "Adaptabilidade"
+    ],
+    "hobbies": [
+      "Leitura de ficção científica",
+      "Mountain Biking",
+      "Desenho digital"
+    ],
+    "academicBackground": [
+      {
+        "institution": "Universidade Federal de Minas Gerais (UFMG)",
+        "course": "Engenharia de Software",
+        "degree": "Bacharelado",
+        "startDate": "2015-02-01",
+        "endDate": "2020-01-30",
+        "status": "Concluído"
+      },
+      {
+        "institution": "Alura Online",
+        "course": "Formação Full Stack React/Node",
+        "degree": "Certificado Profissional",
+        "startDate": "2022-03-01",
+        "endDate": "2022-09-01",
+        "status": "Concluído"
+      }
+    ],
+    "experiences": [
+      {
+        "company": "TechFusion Inovação",
+        "role": "Engenheira de Software Sênior",
+        "startDate": "2022-06-01",
+        "endDate": null,
+        "isCurrent": true,
+        "description": "Liderança técnica na migração de microserviços para arquitetura serverless na AWS. Desenvolvimento e manutenção de APIs REST e componentes front-end críticos em React com TypeScript."
+      },
+      {
+        "company": "Alpha Digital Solutions",
+        "role": "Desenvolvedora Júnior/Pleno",
+        "startDate": "2020-03-01",
+        "endDate": "2022-05-31",
+        "isCurrent": false,
+        "description": "Desenvolvimento de funcionalidades em aplicações legadas e modernas. Foco em testes unitários e integração contínua (CI/CD)."
+      }
+    ]
+  },
+  {
+    "id": 1763386859846,
+    "type": "user",
+    "name": "João Pedro",
+    "email": "jp.marcilio2@gmail.com",
+    "password": "$2b$10$ev/3urYDrnV7eVpfh3uVjeOGxnhlW87d9t1igsfXbyhToNvs8Xa6q",
+    "location": "São Paulo - SP",
+    "photo": "http://localhost:5002/userImages/1763386859778-blob",
+    "description": "",
+    "recommendations": {
+      "count": 0,
+      "users": []
+    },
+    "receivedMessages": [],
+    "actualArea": "",
     "phoneNumber": "11948692771",
     "hardSkills": [],
     "softSkills": [],
