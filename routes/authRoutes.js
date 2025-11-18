@@ -11,6 +11,6 @@ router.get('/profile/:id', authController.getUserById)
 router.patch('/profile/:id', verifyToken, authController.updateProfile)
 router.post('/profile/recommend/:id', verifyToken, authController.recommendProfile)
 router.post('/profile/message/:id', verifyToken, authController.sendMessage)
-router.get('/profile/messages', verifyToken, authController.getAllMessages)
+router.get('/messages', verifyToken, authController.getAllMessages)
 
 module.exports = router

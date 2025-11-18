@@ -103,7 +103,26 @@
       "count": 0,
       "users": []
     },
-    "receivedMessages": [],
+    "receivedMessages": [
+      {
+        "messageId": 1763420835099,
+        "senderId": 1763386859846,
+        "senderType": "user",
+        "timestamp": 1763420835099,
+        "subject": "asdadad",
+        "content": "asdadsdad",
+        "isRead": false
+      },
+      {
+        "messageId": 1763422467291,
+        "senderId": 1763386859846,
+        "senderType": "user",
+        "timestamp": 1763422467291,
+        "subject": "papap",
+        "content": "papapap bom dia",
+        "isRead": true
+      }
+    ],
     "actualArea": "",
     "phoneNumber": "11948692771",
     "hardSkills": [],
