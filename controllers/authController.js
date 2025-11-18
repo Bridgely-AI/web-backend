@@ -45,7 +45,21 @@ const checkDuplicatesAndGetData = (type, reqBody) => {
 
    return { dataList }
 }
+const findUserAndList = (targetId) => {
+   let regularUsers = consultData('user')
+   let companies = consultData('company')
 
+   let userIndex = regularUsers.findIndex(user => user.id == targetId)
+   if (userIndex !== -1) {
+      return { dataList: regularUsers, userIndex, userType: 'user' }
+   }
+
+   userIndex = companies.findIndex(company => company.id == targetId)
+   if (userIndex !== -1) {
+      return { dataList: companies, userIndex, userType: 'company' }
+   }
+   return null
+}
 
 exports.register = async (req, res) => {
    try {
@@ -278,4 +292,62 @@ exports.recommendProfile = async (req, res) => {
    catch (error) {
       return res.status(500).json({ message: 'Erro interno ao processar o registro.', erro: error })
    }
+}
+
+exports.sendMessage = async (req, res) => {
+   try {
+      const senderId = req.user.id
+      const senderType = req.user.type
+      const { recipientId, subject, content } = req.body
+
+      const targetId = parseInt(recipientId)
+      const targetInfo = findUserAndList(targetId)
+
+      if (!targetId || !subject || !content) {
+         return res.status(400).json({ message: 'Campos obrigatórios ausentes.' })
+      }
+      if (targetId == senderId) {
+         return res.status(400).json({ message: 'Você não pode enviar uma mensagem para si mesmo.' })
+      }
+      if (!targetInfo) {
+         return res.status(404).json({ message: 'Destinatário não encontrado.' })
+      }
+      
+      const { dataList, userIndex, userType } = targetInfo
+      const targetUser = dataList[userIndex]
+
+      const newMessage = {
+         messageId: Date.now(),
+         senderId: senderId,
+         senderType: senderType,
+         timestamp: Date.now(),
+         subject: subject,
+         content: content,
+         isRead: false,
+      }
+
+      targetUser.receivedMessages.push(newMessage)
+      saveData(dataList, userType)
+
+      return res.status(200).json({ message: 'Mensagem enviada com sucesso!' })
+   }
+   catch (error) {
+      console.error('Erro ao enviar a mensagem', error)
+      return res.status(500).json({ message: 'Erro interno ao processar o envio da mensagem' })
+   }
+}
+exports.getAllMessages = async (req, res) => {
+   const userId = req.user.id
+   const userType = req.user.type
+
+   const dataList = consultData(userType)
+   const user = dataList.find(u => u.id == userId || u.id == parseInt(userId))
+
+   if (!user) {
+      return res.status(404).json({ message: 'Usuário logado não encontrado na base de dados.'})
+   }
+   
+   const messages = user.receivedMessages || []
+
+   return res.status(200).json({ messages: messages})
 }

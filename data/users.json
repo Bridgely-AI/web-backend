@@ -13,7 +13,26 @@
       "users": []
     },
     "actualArea": "Desenvolvedora Full Stack",
-    "receivedMessages": [],
+    "receivedMessages": [
+      {
+        "messageId": 1763420835099,
+        "senderId": 1763386859846,
+        "senderType": "user",
+        "timestamp": 1763420835099,
+        "subject": "asdadad",
+        "content": "asdadsdad",
+        "isRead": false
+      },
+      {
+        "messageId": 1763422467291,
+        "senderId": 1763386859846,
+        "senderType": "user",
+        "timestamp": 1763422467291,
+        "subject": "papap",
+        "content": "papapap bom dia",
+        "isRead": false
+      }
+    ],
     "phoneNumber": "31987654321",
     "hardSkills": [
       "React",
@@ -79,7 +98,7 @@
     "password": "$2b$10$ev/3urYDrnV7eVpfh3uVjeOGxnhlW87d9t1igsfXbyhToNvs8Xa6q",
     "location": "São Paulo - SP",
     "photo": "http://localhost:5002/userImages/1763386859778-blob",
-    "description": "",
+    "description": "Essa é uma descrição",
     "recommendations": {
       "count": 0,
       "users": []
@@ -91,6 +110,8 @@
     "softSkills": [],
     "hobbies": [],
     "academicBackground": [],
-    "experiences": []
+    "experiences": [],
+    "": "a",
+    "profilePicture": "http://localhost:5002/userImages/1763386859778-blob"
   }
 ]
