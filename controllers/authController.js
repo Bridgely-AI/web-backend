@@ -7,7 +7,7 @@ const SECRET_KEY = process.env.SECRET_KEY
 const dataUsers = path.join(__dirname, '../data/users.json')
 const dataCompanies = path.join(__dirname, '../data/Companies.json')
 
-const consultData = (type) => {
+exports.consultData = (type) => {
    const filePath = type === 'user' ? dataUsers : dataCompanies
 
    try {
@@ -25,12 +25,12 @@ const consultData = (type) => {
       return []
    }
 }
-const saveData = (dataList, type) => {
+exports.saveData = (dataList, type) => {
    const filePath = type === 'user' ? dataUsers : dataCompanies
    fs.writeFileSync(filePath, JSON.stringify(dataList, null, 2))
 }
 const checkDuplicatesAndGetData = (type, reqBody) => {
-   const dataList = consultData(type)
+   const dataList = exports.consultData(type)
 
    if (type == 'user') {
       if (dataList.find(user => user.phoneNumber === reqBody.phoneNumber)) {
@@ -46,8 +46,8 @@ const checkDuplicatesAndGetData = (type, reqBody) => {
    return { dataList }
 }
 const findUserAndList = (targetId) => {
-   let regularUsers = consultData('user')
-   let companies = consultData('company')
+   let regularUsers = exports.consultData('user')
+   let companies = exports.consultData('company')
 
    let userIndex = regularUsers.findIndex(user => user.id == targetId)
    if (userIndex !== -1) {
@@ -128,7 +128,7 @@ exports.register = async (req, res) => {
       }
 
       dataList.push(newProfile)
-      saveData(dataList, type)
+      exports.saveData(dataList, type)
       res.status(200).json({ message: 'Usuario registrado com sucesso!' })
    }
    catch (error) {
@@ -155,8 +155,8 @@ exports.login = async (req, res) => {
 exports.getProfile = async (req, res) => {
    const userId = req.user.id
 
-   const regularUsers = consultData('user')
-   const companies = consultData('company')
+   const regularUsers = exports.consultData('user')
+   const companies = exports.consultData('company')
 
    const user = regularUsers.find(user => user.id == userId || user.id == parseInt(userId)) ||
       companies.find(company => company.id == userId || company.id == parseInt(userId))
@@ -171,8 +171,8 @@ exports.getProfile = async (req, res) => {
 }
 exports.getUserById = async (req, res) => {
    const targetId = parseInt(req.params.id)
-   const regularUsers = consultData('user')
-   const companies = consultData('company')
+   const regularUsers = exports.consultData('user')
+   const companies = exports.consultData('company')
 
    const user = regularUsers.find(user => user.id == targetId) ||
       companies.find(company => company.id == targetId)
@@ -208,7 +208,7 @@ exports.updateProfile = async (req, res) => {
       return res.status(403).json({ message: 'Você não tem permissão para editar este perfil.' })
    }
 
-   let dataList = consultData(userTypeFromToken)
+   let dataList = exports.consultData(userTypeFromToken)
    const userIndex = dataList.findIndex(user => user.id == targetId)
 
    if (userIndex === -1) {
@@ -230,7 +230,7 @@ exports.updateProfile = async (req, res) => {
    }
 
    dataList[userIndex] = updatedUser
-   saveData(dataList, userTypeFromToken)
+   exports.saveData(dataList, userTypeFromToken)
    const { password, ...responseProfile } = updatedUser
 
    res.status(200).json({ message: 'Perfil atualizado com sucesso', user: responseProfile })
@@ -241,8 +241,8 @@ exports.recommendProfile = async (req, res) => {
       const recommenderId = req.user.id
       const recommenderType = req.user.type
 
-      const regularUsers = consultData('user')
-      const companies = consultData('company')
+      const regularUsers = exports.consultData('user')
+      const companies = exports.consultData('company')
 
       let dataList
       let userIndex
@@ -272,7 +272,7 @@ exports.recommendProfile = async (req, res) => {
          user.recommendations.count -= 1
          user.recommendations.users = updatedUser
 
-         saveData(dataList, user.type)
+         exports.saveData(dataList, user.type)
          return res.status(200).json({
             message: 'Recomendação retirada com sucesso',
             newCount: user.recommendations.count
@@ -282,7 +282,7 @@ exports.recommendProfile = async (req, res) => {
       user.recommendations.count += 1
       user.recommendations.users.push(recommenderId)
 
-      saveData(dataList, user.type)
+      exports.saveData(dataList, user.type)
 
       return res.status(200).json({
          message: 'Recomendação registrada com sucesso',
@@ -327,7 +327,7 @@ exports.sendMessage = async (req, res) => {
       }
 
       targetUser.receivedMessages.push(newMessage)
-      saveData(dataList, userType)
+      exports.saveData(dataList, userType)
 
       return res.status(200).json({ message: 'Mensagem enviada com sucesso!' })
    }
@@ -340,7 +340,7 @@ exports.getAllMessages = async (req, res) => {
    const userId = req.user.id
    const userType = req.user.type
 
-   const dataList = consultData(userType)
+   const dataList = exports.consultData(userType)
    const user = dataList.find(u => u.id == userId || u.id == parseInt(userId))
 
    if (!user) {

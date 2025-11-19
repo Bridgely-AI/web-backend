@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path');
 
 const authRoutes = require('./routes/authRoutes')
+const aiRoutes = require('./routes/aiRoutes')
 
 const app = express()
 const port = process.env.PORT || 5002
@@ -13,6 +14,7 @@ app.use(express.json())
 
 app.use('/userImages', express.static(path.join(__dirname, 'public', 'userImages')))
 app.use('/', authRoutes)
+app.use('/api', aiRoutes)
 
 app.listen(port, () => {
    console.log(`Server running in http://localhost:${port}`)
