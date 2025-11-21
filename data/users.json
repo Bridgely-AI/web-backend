@@ -98,7 +98,7 @@
     "password": "$2b$10$ev/3urYDrnV7eVpfh3uVjeOGxnhlW87d9t1igsfXbyhToNvs8Xa6q",
     "location": "São Paulo - SP",
     "photo": "http://localhost:5002/userImages/1763386859778-blob",
-    "description": "Essa é uma descrição",
+    "description": "",
     "recommendations": {
       "count": 0,
       "users": []
@@ -111,7 +111,7 @@
         "timestamp": 1763420835099,
         "subject": "asdadad",
         "content": "asdadsdad",
-        "isRead": false
+        "isRead": true
       },
       {
         "messageId": 1763422467291,
@@ -123,14 +123,13 @@
         "isRead": true
       }
     ],
-    "actualArea": "",
+    "actualArea": "Engenheiro de Software",
     "phoneNumber": "11948692771",
     "hardSkills": [],
     "softSkills": [],
     "hobbies": [],
     "academicBackground": [],
     "experiences": [],
-    "": "a",
     "profilePicture": "http://localhost:5002/userImages/1763386859778-blob"
   }
 ]

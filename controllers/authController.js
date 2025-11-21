@@ -5,9 +5,9 @@ const fs = require('fs')
 
 const SECRET_KEY = process.env.SECRET_KEY
 const dataUsers = path.join(__dirname, '../data/users.json')
-const dataCompanies = path.join(__dirname, '../data/Companies.json')
+const dataCompanies = path.join(__dirname, '../data/companies.json')
 
-exports.consultData = (type) => {
+const consultData = (type) => {
    const filePath = type === 'user' ? dataUsers : dataCompanies
 
    try {
@@ -25,10 +25,12 @@ exports.consultData = (type) => {
       return []
    }
 }
-exports.saveData = (dataList, type) => {
+exports.consultData = consultData
+const saveData = (dataList, type) => {
    const filePath = type === 'user' ? dataUsers : dataCompanies
    fs.writeFileSync(filePath, JSON.stringify(dataList, null, 2))
 }
+exports.saveData = saveData
 const checkDuplicatesAndGetData = (type, reqBody) => {
    const dataList = exports.consultData(type)
 
@@ -194,7 +196,11 @@ exports.getUserById = async (req, res) => {
       hobbies: user.hobbies,
       academicBackground: user.academicBackground,
       experiences: user.experiences,
-      recommendations: user.recommendations
+      recommendations: user.recommendations,
+      email: user.email,
+      website: user.website,
+      jobs: user.jobs || [],
+      futureJobs: user.futureJobs || []
    }
 
    return res.status(200).json({ user: publicProfile })
@@ -219,7 +225,6 @@ exports.updateProfile = async (req, res) => {
    const updates = req.body
    const protectedUpdates = { ...updates }
 
-   delete protectedUpdates.email
    delete protectedUpdates.password
    delete protectedUpdates.type
    delete protectedUpdates.id
@@ -350,4 +355,33 @@ exports.getAllMessages = async (req, res) => {
    const messages = user.receivedMessages || []
 
    return res.status(200).json({ messages: messages})
+}
+exports.markMessageAsRead = async (req, res) => {
+   try {
+      const userId = req.user.id
+      const userType = req.user.type
+      const messageId = parseInt(req.params.id)
+
+      const dataList = consultData(userType)
+
+      const userIndex = dataList.findIndex(u => u.id == userId || u.id == parseInt(userId))
+      
+      if (userIndex == -1) {
+         return res.status(404).json({ message: 'Usuário não encontrado.' })
+      }
+
+      const user = dataList[userIndex]
+      const messageIndex = user.receivedMessages.findIndex(m => m.messageId == messageId)
+      
+      if (messageIndex == -1) {
+         return res.status(404).json({ message: 'Mensagem não encontrada.' })
+      }
+
+      user.receivedMessages[messageIndex].isRead = true
+      saveData(dataList, userType)
+      return res.status(200).json({message:'Mensagem marcada como lida.'})
+   }
+   catch (error) {
+      return res.status(500).json({ message: 'Erro interno do servidor.' })
+   }
 }

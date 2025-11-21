@@ -1,1 +1,124 @@
-[]
+[
+  {
+    "id": 1764000000001,
+    "type": "company",
+    "name": "Nexus Tecnologia & Inovação",
+    "email": "contato@nexustech.com.br",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Florianópolis - SC",
+    "photo": "http://localhost:5002/userImages/company1-placeholder.png",
+    "description": "Somos uma empresa líder em soluções de Cloud Computing e Inteligência Artificial no sul do Brasil. Nossa missão é transformar negócios tradicionais através da tecnologia de ponta, com uma cultura focada em inovação contínua e bem-estar dos colaboradores.",
+    "website": "https://www.nexustech.com.br",
+    "area": "Tecnologia da Informação",
+    "cnpj": "12.345.678/0001-90",
+    "recommendations": {
+      "count": 42,
+      "users": [
+        1763250819227,
+        1790123456789
+      ]
+    },
+    "receivedMessages": [],
+    "jobs": [
+      {
+        "title": "Desenvolvedor Full Stack Sênior",
+        "description": "Procuramos especialista em Node.js e React para liderar nossa nova squad de produtos financeiros. Necessário experiência com arquitetura de microsserviços.",
+        "link": "https://linkedin.com/jobs/view/123456"
+      },
+      {
+        "title": "DevOps Engineer",
+        "description": "Gerenciamento de infraestrutura AWS, pipelines CI/CD e automação de processos utilizando Terraform e Docker.",
+        "link": "https://nexustech.gupy.io/job/987654"
+      }
+    ],
+    "futureJobs": [
+      {
+        "title": "Cientista de Dados (Júnior)",
+        "description": "Vaga para atuar no time de Analytics, auxiliando na criação de modelos preditivos.",
+        "link": "",
+        "expectedDate": "2º Semestre 2025"
+      },
+      {
+        "title": "Estágio em QA",
+        "description": "Oportunidade para estudantes de computação aprenderem sobre testes automatizados.",
+        "link": "",
+        "expectedDate": "Janeiro 2026"
+      }
+    ]
+  },
+  {
+    "id": 1764000000002,
+    "type": "company",
+    "name": "Grupo Horizonte Financeiro",
+    "email": "rh@grupohorizonte.com.br",
+    "password": "$2b$10$DWfqvH.1gkIC2lrU5dDiHe7N4pAuREQlUvh5Ed7B2oGjRgjxmtGj6",
+    "location": "São Paulo - SP",
+    "photo": "http://localhost:5002/userImages/company2-placeholder.png",
+    "description": "Com mais de 20 anos de mercado, o Grupo Horizonte oferece consultoria financeira estratégica para grandes corporações. Estamos em processo de transformação digital e buscamos talentos para modernizar nossa plataforma de investimentos.",
+    "website": "https://www.grupohorizonte.com.br",
+    "area": "Finanças e Fintech",
+    "cnpj": "98.765.432/0001-10",
+    "recommendations": {
+      "count": 156,
+      "users": []
+    },
+    "receivedMessages": [],
+    "jobs": [
+      {
+        "title": "Especialista em Segurança da Informação",
+        "description": "Responsável por garantir a segurança de dados sensíveis e conformidade com a LGPD em nossas aplicações bancárias.",
+        "link": "https://horizonte.vagas.com.br/security"
+      }
+    ],
+    "futureJobs": [
+      {
+        "title": "Desenvolvedor Mobile (Flutter)",
+        "description": "Expansão do time para criação do novo App de Investimentos para pessoa física.",
+        "link": "",
+        "expectedDate": "Novembro 2025"
+      }
+    ]
+  },
+  {
+    "id": 1763700984367,
+    "type": "company",
+    "name": "Nexus",
+    "email": "nexusfiap@gma",
+    "password": "$2b$10$Jx5V/.S5KywOy/Iku0Bx4.fxjdPL6IWZy4NpHxQlOggWPfx2OLXNG",
+    "location": "bom ",
+    "photo": "http://localhost:5002/userImages/1763700984122-blob",
+    "description": "aaaaaaaaa",
+    "recommendations": {
+      "count": 0,
+      "users": []
+    },
+    "receivedMessages": [],
+    "website": "b",
+    "area": "",
+    "cnpj": "234567891",
+    "jobs": [
+      {
+        "course": "",
+        "degree": "",
+        "institution": "",
+        "status": "",
+        "startDate": "",
+        "endDate": "",
+        "title": "aaaaaaaaaaaa",
+        "description": "oioioi"
+      },
+      {
+        "course": "",
+        "degree": "",
+        "institution": "",
+        "status": "",
+        "startDate": "",
+        "endDate": "",
+        "title": "oioi"
+      }
+    ],
+    "futureJobs": [],
+    "actualArea": "aaa",
+    "profilePicture": "http://localhost:5002/userImages/1763700984122-blob"
+  }
+]
