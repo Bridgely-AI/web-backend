@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path');
 
 const authRoutes = require('./routes/authRoutes')
+const feedRoutes = require('./routes/feedRoutes')
 const aiRoutes = require('./routes/aiRoutes')
 
 const app = express()
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use('/userImages', express.static(path.join(__dirname, 'public', 'userImages')))
 app.use('/', authRoutes)
+app.use('/feed', feedRoutes)
 app.use('/api', aiRoutes)
 
 app.listen(port, () => {

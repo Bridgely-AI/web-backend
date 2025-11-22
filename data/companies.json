@@ -1,124 +1,46 @@
 [
   {
-    "id": 1764000000001,
-    "type": "company",
-    "name": "Nexus Tecnologia & Inovação",
-    "email": "contato@nexustech.com.br",
-    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
-    "location": "Florianópolis - SC",
-    "photo": "http://localhost:5002/userImages/company1-placeholder.png",
-    "description": "Somos uma empresa líder em soluções de Cloud Computing e Inteligência Artificial no sul do Brasil. Nossa missão é transformar negócios tradicionais através da tecnologia de ponta, com uma cultura focada em inovação contínua e bem-estar dos colaboradores.",
-    "website": "https://www.nexustech.com.br",
-    "area": "Tecnologia da Informação",
-    "cnpj": "12.345.678/0001-90",
-    "recommendations": {
-      "count": 42,
-      "users": [
-        1763250819227,
-        1790123456789
-      ]
-    },
-    "receivedMessages": [],
-    "jobs": [
-      {
-        "title": "Desenvolvedor Full Stack Sênior",
-        "description": "Procuramos especialista em Node.js e React para liderar nossa nova squad de produtos financeiros. Necessário experiência com arquitetura de microsserviços.",
-        "link": "https://linkedin.com/jobs/view/123456"
-      },
-      {
-        "title": "DevOps Engineer",
-        "description": "Gerenciamento de infraestrutura AWS, pipelines CI/CD e automação de processos utilizando Terraform e Docker.",
-        "link": "https://nexustech.gupy.io/job/987654"
-      }
-    ],
-    "futureJobs": [
-      {
-        "title": "Cientista de Dados (Júnior)",
-        "description": "Vaga para atuar no time de Analytics, auxiliando na criação de modelos preditivos.",
-        "link": "",
-        "expectedDate": "2º Semestre 2025"
-      },
-      {
-        "title": "Estágio em QA",
-        "description": "Oportunidade para estudantes de computação aprenderem sobre testes automatizados.",
-        "link": "",
-        "expectedDate": "Janeiro 2026"
-      }
-    ]
+    "id": 1766000000001, "type": "company", "name": "TechNova Solutions", "email": "rh@technova.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=TechNova&background=0D8ABC&color=fff&rounded=true",
+    "description": "Inovação em software corporativo.", "website": "https://technova.com", "area": "Tecnologia", "cnpj": "12345678000101",
+    "recommendations": { "count": 120, "users": [] }, "receivedMessages": [],
+    "jobs": [{ "title": "Desenvolvedor React", "description": "Experiência com React e Redux.", "link": "https://linkedin.com/jobs" }],
+    "futureJobs": []
   },
   {
-    "id": 1764000000002,
-    "type": "company",
-    "name": "Grupo Horizonte Financeiro",
-    "email": "rh@grupohorizonte.com.br",
-    "password": "$2b$10$DWfqvH.1gkIC2lrU5dDiHe7N4pAuREQlUvh5Ed7B2oGjRgjxmtGj6",
-    "location": "São Paulo - SP",
-    "photo": "http://localhost:5002/userImages/company2-placeholder.png",
-    "description": "Com mais de 20 anos de mercado, o Grupo Horizonte oferece consultoria financeira estratégica para grandes corporações. Estamos em processo de transformação digital e buscamos talentos para modernizar nossa plataforma de investimentos.",
-    "website": "https://www.grupohorizonte.com.br",
-    "area": "Finanças e Fintech",
-    "cnpj": "98.765.432/0001-10",
-    "recommendations": {
-      "count": 156,
-      "users": []
-    },
-    "receivedMessages": [],
-    "jobs": [
-      {
-        "title": "Especialista em Segurança da Informação",
-        "description": "Responsável por garantir a segurança de dados sensíveis e conformidade com a LGPD em nossas aplicações bancárias.",
-        "link": "https://horizonte.vagas.com.br/security"
-      }
-    ],
-    "futureJobs": [
-      {
-        "title": "Desenvolvedor Mobile (Flutter)",
-        "description": "Expansão do time para criação do novo App de Investimentos para pessoa física.",
-        "link": "",
-        "expectedDate": "Novembro 2025"
-      }
-    ]
+    "id": 1766000000002, "type": "company", "name": "Banco Futuro", "email": "vagas@bancofuturo.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "São Paulo", "photo": "https://ui-avatars.com/api/?name=Banco+Futuro&background=2E7D32&color=fff&rounded=true",
+    "description": "O banco digital da nova geração.", "website": "https://bancofuturo.com", "area": "Fintech", "cnpj": "12345678000102",
+    "recommendations": { "count": 250, "users": [] }, "receivedMessages": [],
+    "jobs": [{ "title": "Java Backend Developer", "description": "Spring Boot e Microserviços.", "link": "#" }],
+    "futureJobs": []
   },
-  {
-    "id": 1763700984367,
-    "type": "company",
-    "name": "Nexus",
-    "email": "nexusfiap@gma",
-    "password": "$2b$10$Jx5V/.S5KywOy/Iku0Bx4.fxjdPL6IWZy4NpHxQlOggWPfx2OLXNG",
-    "location": "bom ",
-    "photo": "http://localhost:5002/userImages/1763700984122-blob",
-    "description": "aaaaaaaaa",
-    "recommendations": {
-      "count": 0,
-      "users": []
-    },
-    "receivedMessages": [],
-    "website": "b",
-    "area": "",
-    "cnpj": "234567891",
-    "jobs": [
-      {
-        "course": "",
-        "degree": "",
-        "institution": "",
-        "status": "",
-        "startDate": "",
-        "endDate": "",
-        "title": "aaaaaaaaaaaa",
-        "description": "oioioi"
-      },
-      {
-        "course": "",
-        "degree": "",
-        "institution": "",
-        "status": "",
-        "startDate": "",
-        "endDate": "",
-        "title": "oioi"
-      }
-    ],
-    "futureJobs": [],
-    "actualArea": "aaa",
-    "profilePicture": "http://localhost:5002/userImages/1763700984122-blob"
-  }
+  { "id": 1766000000003, "type": "company", "name": "HealthTech Vida", "email": "contato@htvida.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=HealthTech&background=D81B60&color=fff&rounded=true", "description": "Tecnologia a favor da saúde.", "website": "", "area": "Saúde", "cnpj": "12345678000103", "recommendations": { "count": 85, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Data Analyst", "description": "Análise de dados clínicos.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000004, "type": "company", "name": "AgroData", "email": "rh@agrodata.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Coimbra", "photo": "https://ui-avatars.com/api/?name=AgroData&background=F9A825&color=fff&rounded=true", "description": "Inteligência para o campo.", "website": "", "area": "Agritech", "cnpj": "12345678000104", "recommendations": { "count": 40, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "DevOps Engineer", "description": "AWS e IoT.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000005, "type": "company", "name": "EducaMais", "email": "jobs@educamais.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Rio de Janeiro", "photo": "https://ui-avatars.com/api/?name=EducaMais&background=6A1B9A&color=fff&rounded=true", "description": "Plataforma de ensino online.", "website": "", "area": "Edtech", "cnpj": "12345678000105", "recommendations": { "count": 90, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "UX/UI Designer", "description": "Melhorar a experiência do aluno.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000006, "type": "company", "name": "LogiFast", "email": "rh@logifast.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Aveiro", "photo": "https://ui-avatars.com/api/?name=LogiFast&background=1565C0&color=fff&rounded=true", "description": "Logística inteligente.", "website": "", "area": "Logística", "cnpj": "12345678000106", "recommendations": { "count": 60, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Mobile Dev (Flutter)", "description": "App para motoristas.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000007, "type": "company", "name": "SoftHouse Portugal", "email": "recrutamento@softhouse.pt", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Braga", "photo": "https://ui-avatars.com/api/?name=SoftHouse&background=00838F&color=fff&rounded=true", "description": "Consultoria de software.", "website": "", "area": "Consultoria", "cnpj": "12345678000107", "recommendations": { "count": 110, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Full Stack .NET", "description": "C# e Angular.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000008, "type": "company", "name": "CyberSec Guard", "email": "security@cybersec.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=CyberSec&background=37474F&color=fff&rounded=true", "description": "Segurança da informação.", "website": "", "area": "Cibersegurança", "cnpj": "12345678000108", "recommendations": { "count": 75, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Security Analyst", "description": "Blue Team, SIEM.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000009, "type": "company", "name": "Marketing 360", "email": "rh@mkt360.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=MKT+360&background=AD1457&color=fff&rounded=true", "description": "Agência de Marketing Digital.", "website": "", "area": "Marketing", "cnpj": "12345678000109", "recommendations": { "count": 45, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "SEO Specialist", "description": "Otimização de sites.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000010, "type": "company", "name": "GameStudio Z", "email": "jobs@gamestudioz.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Faro", "photo": "https://ui-avatars.com/api/?name=GameStudio&background=FF6F00&color=fff&rounded=true", "description": "Desenvolvimento de jogos mobile.", "website": "", "area": "Games", "cnpj": "12345678000110", "recommendations": { "count": 95, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Unity Developer", "description": "C# e Unity 3D.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000011, "type": "company", "name": "Green Energy", "email": "rh@greenenergy.pt", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Évora", "photo": "https://ui-avatars.com/api/?name=Green+Energy&background=558B2F&color=fff&rounded=true", "description": "Energias renováveis.", "website": "", "area": "Energia", "cnpj": "12345678000111", "recommendations": { "count": 30, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000012, "type": "company", "name": "AutoMotion", "email": "recrutamento@automotion.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Setúbal", "photo": "https://ui-avatars.com/api/?name=AutoMotion&background=455A64&color=fff&rounded=true", "description": "Automação industrial.", "website": "", "area": "Indústria", "cnpj": "12345678000112", "recommendations": { "count": 22, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Engenheiro de Automação", "description": "PLC e SCADA.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000013, "type": "company", "name": "Retail King", "email": "jobs@retailking.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=Retail+King&background=E65100&color=fff&rounded=true", "description": "Maior rede de varejo.", "website": "", "area": "Varejo", "cnpj": "12345678000113", "recommendations": { "count": 180, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Gerente de Loja", "description": "Gestão de equipas.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000014, "type": "company", "name": "Constructa", "email": "rh@constructa.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=Constructa&background=795548&color=fff&rounded=true", "description": "Construção civil e obras públicas.", "website": "", "area": "Construção", "cnpj": "12345678000114", "recommendations": { "count": 15, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000015, "type": "company", "name": "Legal Tech", "email": "vagas@legaltech.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Coimbra", "photo": "https://ui-avatars.com/api/?name=Legal+Tech&background=283593&color=fff&rounded=true", "description": "Soluções jurídicas digitais.", "website": "", "area": "Direito", "cnpj": "12345678000115", "recommendations": { "count": 35, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Advogado Digital", "description": "LGPD e Compliance.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000016, "type": "company", "name": "Fashion Forward", "email": "jobs@fashionfw.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=Fashion+FW&background=C2185B&color=fff&rounded=true", "description": "Moda e E-commerce.", "website": "", "area": "Moda", "cnpj": "12345678000116", "recommendations": { "count": 65, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "E-commerce Manager", "description": "Gestão de loja online.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000017, "type": "company", "name": "Travel Go", "email": "rh@travelgo.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Faro", "photo": "https://ui-avatars.com/api/?name=Travel+Go&background=0288D1&color=fff&rounded=true", "description": "Agência de viagens digital.", "website": "", "area": "Turismo", "cnpj": "12345678000117", "recommendations": { "count": 40, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000018, "type": "company", "name": "Foodie App", "email": "jobs@foodie.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Braga", "photo": "https://ui-avatars.com/api/?name=Foodie+App&background=E53935&color=fff&rounded=true", "description": "Delivery de comida.", "website": "", "area": "Foodtech", "cnpj": "12345678000118", "recommendations": { "count": 100, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Backend Developer (Node.js)", "description": "API de alta performance.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000019, "type": "company", "name": "Clean Energy", "email": "rh@cleanenergy.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Viseu", "photo": "https://ui-avatars.com/api/?name=Clean+Energy&background=33691E&color=fff&rounded=true", "description": "Soluções solares.", "website": "", "area": "Energia", "cnpj": "12345678000119", "recommendations": { "count": 25, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000020, "type": "company", "name": "Media Star", "email": "vagas@mediastar.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=Media+Star&background=607D8B&color=fff&rounded=true", "description": "Produtora de vídeo e conteúdo.", "website": "", "area": "Media", "cnpj": "12345678000120", "recommendations": { "count": 30, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Video Editor", "description": "Premiere e After Effects.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000021, "type": "company", "name": "Consulting Pro", "email": "rh@consultingpro.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=Consulting&background=4E342E&color=fff&rounded=true", "description": "Consultoria empresarial.", "website": "", "area": "Consultoria", "cnpj": "12345678000121", "recommendations": { "count": 55, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000022, "type": "company", "name": "Arch Design", "email": "jobs@archdesign.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Aveiro", "photo": "https://ui-avatars.com/api/?name=Arch+Design&background=9E9D24&color=fff&rounded=true", "description": "Arquitetura sustentável.", "website": "", "area": "Arquitetura", "cnpj": "12345678000122", "recommendations": { "count": 18, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000023, "type": "company", "name": "Eventos Plus", "email": "rh@eventosplus.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=Eventos+Plus&background=8E24AA&color=fff&rounded=true", "description": "Organização de eventos corporativos.", "website": "", "area": "Eventos", "cnpj": "12345678000123", "recommendations": { "count": 42, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000024, "type": "company", "name": "Pet Care", "email": "vagas@petcare.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Coimbra", "photo": "https://ui-avatars.com/api/?name=Pet+Care&background=FF8F00&color=fff&rounded=true", "description": "Produtos para animais.", "website": "", "area": "Varejo", "cnpj": "12345678000124", "recommendations": { "count": 60, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000025, "type": "company", "name": "BioTech Lab", "email": "rh@biotech.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Braga", "photo": "https://ui-avatars.com/api/?name=BioTech&background=00695C&color=fff&rounded=true", "description": "Pesquisa em biotecnologia.", "website": "", "area": "Ciência", "cnpj": "12345678000125", "recommendations": { "count": 15, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Pesquisador Júnior", "description": "Biologia molecular.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000026, "type": "company", "name": "Cloud Safe", "email": "jobs@cloudsafe.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=Cloud+Safe&background=303F9F&color=fff&rounded=true", "description": "Armazenamento seguro na nuvem.", "website": "", "area": "Tecnologia", "cnpj": "12345678000126", "recommendations": { "count": 88, "users": [] }, "receivedMessages": [], "jobs": [{ "title": "Cloud Engineer", "description": "AWS, Azure.", "link": "#" }], "futureJobs": [] },
+  { "id": 1766000000027, "type": "company", "name": "Print Master", "email": "rh@printmaster.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Setúbal", "photo": "https://ui-avatars.com/api/?name=Print+Master&background=546E7A&color=fff&rounded=true", "description": "Soluções de impressão.", "website": "", "area": "Serviços", "cnpj": "12345678000127", "recommendations": { "count": 10, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000028, "type": "company", "name": "Fit Life", "email": "vagas@fitlife.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Faro", "photo": "https://ui-avatars.com/api/?name=Fit+Life&background=C62828&color=fff&rounded=true", "description": "Academia e bem-estar.", "website": "", "area": "Saúde", "cnpj": "12345678000128", "recommendations": { "count": 50, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000029, "type": "company", "name": "Urban Move", "email": "rh@urbanmove.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Lisboa", "photo": "https://ui-avatars.com/api/?name=Urban+Move&background=F57C00&color=fff&rounded=true", "description": "Mobilidade urbana.", "website": "", "area": "Transporte", "cnpj": "12345678000129", "recommendations": { "count": 70, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] },
+  { "id": 1766000000030, "type": "company", "name": "Book World", "email": "jobs@bookworld.com", "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a", "location": "Porto", "photo": "https://ui-avatars.com/api/?name=Book+World&background=7CB342&color=fff&rounded=true", "description": "Livraria online.", "website": "", "area": "Varejo", "cnpj": "12345678000130", "recommendations": { "count": 20, "users": [] }, "receivedMessages": [], "jobs": [], "futureJobs": [] }
 ]

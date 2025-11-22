@@ -1,135 +1,1046 @@
 [
   {
-    "id": 1790123456789,
+    "id": 1765000000001,
     "type": "user",
-    "name": "Mariana Souza Silva",
-    "email": "mariana.silva@exemplo.com",
-    "password": "$2b$10$uA3nK8gH7bC9lW3pX2yT5OaQz1FmM4sR6vI0eJdF8pG7qH6iK5jL",
-    "location": "Belo Horizonte - MG",
-    "photo": "http://localhost:5002/userImages/userPhotoPlaceholder.png",
-    "description": "Engenheira de Software Full Stack com 5 anos de experiência em desenvolvimento de aplicações escaláveis usando React e Node.js. Foco em otimização de performance e metodologias Ágeis.",
+    "name": "Ana Silva",
+    "email": "ana.silva@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Ana+Silva&background=random",
+    "description": "Full Stack Developer apaixonada por React e Node.js. Adoro resolver problemas complexos e criar interfaces intuitivas.",
     "recommendations": {
-      "count": 0,
+      "count": 15,
       "users": []
     },
     "actualArea": "Desenvolvedora Full Stack",
-    "receivedMessages": [
-      {
-        "messageId": 1763420835099,
-        "senderId": 1763386859846,
-        "senderType": "user",
-        "timestamp": 1763420835099,
-        "subject": "asdadad",
-        "content": "asdadsdad",
-        "isRead": false
-      },
-      {
-        "messageId": 1763422467291,
-        "senderId": 1763386859846,
-        "senderType": "user",
-        "timestamp": 1763422467291,
-        "subject": "papap",
-        "content": "papapap bom dia",
-        "isRead": false
-      }
-    ],
-    "phoneNumber": "31987654321",
+    "phoneNumber": "912345678",
+    "receivedMessages": [],
     "hardSkills": [
       "React",
       "Node.js",
       "TypeScript",
-      "AWS",
       "MongoDB",
-      "Docker"
+      "AWS"
     ],
     "softSkills": [
       "Comunicação",
-      "Liderança Técnica",
-      "Resolução de Problemas",
-      "Adaptabilidade"
+      "Proatividade",
+      "Trabalho em Equipa"
     ],
     "hobbies": [
-      "Leitura de ficção científica",
-      "Mountain Biking",
-      "Desenho digital"
+      "Fotografia",
+      "Viagens"
     ],
     "academicBackground": [
       {
-        "institution": "Universidade Federal de Minas Gerais (UFMG)",
-        "course": "Engenharia de Software",
-        "degree": "Bacharelado",
-        "startDate": "2015-02-01",
-        "endDate": "2020-01-30",
-        "status": "Concluído"
-      },
-      {
-        "institution": "Alura Online",
-        "course": "Formação Full Stack React/Node",
-        "degree": "Certificado Profissional",
-        "startDate": "2022-03-01",
-        "endDate": "2022-09-01",
-        "status": "Concluído"
+        "course": "Engenharia Informática",
+        "institution": "IST",
+        "degree": "Mestrado",
+        "status": "Concluído",
+        "startDate": "2015-09-01",
+        "endDate": "2020-07-01"
       }
     ],
     "experiences": [
       {
-        "company": "TechFusion Inovação",
-        "role": "Engenheira de Software Sênior",
-        "startDate": "2022-06-01",
-        "endDate": null,
-        "isCurrent": true,
-        "description": "Liderança técnica na migração de microserviços para arquitetura serverless na AWS. Desenvolvimento e manutenção de APIs REST e componentes front-end críticos em React com TypeScript."
-      },
-      {
-        "company": "Alpha Digital Solutions",
-        "role": "Desenvolvedora Júnior/Pleno",
-        "startDate": "2020-03-01",
-        "endDate": "2022-05-31",
-        "isCurrent": false,
-        "description": "Desenvolvimento de funcionalidades em aplicações legadas e modernas. Foco em testes unitários e integração contínua (CI/CD)."
+        "role": "Dev Júnior",
+        "company": "Tech Solutions",
+        "description": "Desenvolvimento web.",
+        "startDate": "2021-01-01",
+        "endDate": "2023-01-01",
+        "isCurrent": false
       }
     ]
   },
   {
-    "id": 1763386859846,
+    "id": 1765000000002,
+    "type": "user",
+    "name": "Bruno Santos",
+    "email": "bruno.santos@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Porto",
+    "photo": "https://ui-avatars.com/api/?name=Bruno+Santos&background=random",
+    "description": "Especialista em Backend com foco em Java e Spring Boot. Experiência em arquitetura de microsserviços.",
+    "recommendations": {
+      "count": 8,
+      "users": []
+    },
+    "actualArea": "Engenheiro de Backend",
+    "phoneNumber": "912345679",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Java",
+      "Spring Boot",
+      "Docker",
+      "Kubernetes",
+      "SQL"
+    ],
+    "softSkills": [
+      "Resolução de Problemas",
+      "Liderança"
+    ],
+    "hobbies": [
+      "Gaming",
+      "Ciclismo"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000003,
+    "type": "user",
+    "name": "Carla Oliveira",
+    "email": "carla.oli@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Coimbra",
+    "photo": "https://ui-avatars.com/api/?name=Carla+Oliveira&background=random",
+    "description": "UX/UI Designer focada em acessibilidade e Design Systems.",
+    "recommendations": {
+      "count": 22,
+      "users": []
+    },
+    "actualArea": "UX/UI Designer",
+    "phoneNumber": "912345680",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Figma",
+      "Adobe XD",
+      "CSS",
+      "HTML",
+      "Prototipagem"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Criatividade"
+    ],
+    "hobbies": [
+      "Pintura",
+      "Yoga"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000004,
+    "type": "user",
+    "name": "Daniel Costa",
+    "email": "daniel.costa@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Braga",
+    "photo": "https://ui-avatars.com/api/?name=Daniel+Costa&background=random",
+    "description": "Cientista de Dados com experiência em Python e Machine Learning.",
+    "recommendations": {
+      "count": 5,
+      "users": []
+    },
+    "actualArea": "Data Scientist",
+    "phoneNumber": "912345681",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "TensorFlow",
+      "SQL"
+    ],
+    "softSkills": [
+      "Analítico",
+      "Curiosidade"
+    ],
+    "hobbies": [
+      "Xadrez",
+      "Leitura"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000005,
+    "type": "user",
+    "name": "Eduarda Pereira",
+    "email": "eduarda.p@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Aveiro",
+    "photo": "https://ui-avatars.com/api/?name=Eduarda+Pereira&background=random",
+    "description": "QA Engineer garantindo a qualidade de software através de automação.",
+    "recommendations": {
+      "count": 12,
+      "users": []
+    },
+    "actualArea": "QA Automation Engineer",
+    "phoneNumber": "912345682",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Selenium",
+      "Cypress",
+      "JavaScript",
+      "Jira",
+      "Jenkins"
+    ],
+    "softSkills": [
+      "Atenção ao Detalhe",
+      "Organização"
+    ],
+    "hobbies": [
+      "Música",
+      "Caminhadas"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000006,
+    "type": "user",
+    "name": "Fábio Martins",
+    "email": "fabio.m@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Faro",
+    "photo": "https://ui-avatars.com/api/?name=Fabio+Martins&background=random",
+    "description": "Mobile Developer (iOS/Swift) com 3 anos de experiência.",
+    "recommendations": {
+      "count": 7,
+      "users": []
+    },
+    "actualArea": "Mobile Developer",
+    "phoneNumber": "912345683",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Swift",
+      "iOS",
+      "Xcode",
+      "Git",
+      "Rest APIs"
+    ],
+    "softSkills": [
+      "Foco",
+      "Adaptabilidade"
+    ],
+    "hobbies": [
+      "Surf",
+      "Skate"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000007,
+    "type": "user",
+    "name": "Gabriela Sousa",
+    "email": "gabi.sousa@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Leiria",
+    "photo": "https://ui-avatars.com/api/?name=Gabriela+Sousa&background=random",
+    "description": "Product Manager ajudando equipas a entregar valor.",
+    "recommendations": {
+      "count": 30,
+      "users": []
+    },
+    "actualArea": "Product Manager",
+    "phoneNumber": "912345684",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Jira",
+      "Scrum",
+      "Roadmapping",
+      "Analytics",
+      "Inglês"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Comunicação",
+      "Negociação"
+    ],
+    "hobbies": [
+      "Podcasts",
+      "Corrida"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000008,
+    "type": "user",
+    "name": "Hugo Ferreira",
+    "email": "hugo.f@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Viseu",
+    "photo": "https://ui-avatars.com/api/?name=Hugo+Ferreira&background=random",
+    "description": "DevOps Engineer focado em Cloud e Automação.",
+    "recommendations": {
+      "count": 18,
+      "users": []
+    },
+    "actualArea": "DevOps Engineer",
+    "phoneNumber": "912345685",
+    "receivedMessages": [],
+    "hardSkills": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Linux",
+      "Python"
+    ],
+    "softSkills": [
+      "Resolução de Problemas",
+      "Gestão de Tempo"
+    ],
+    "hobbies": [
+      "Tecnologia",
+      "Impressão 3D"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000009,
+    "type": "user",
+    "name": "Inês Rodrigues",
+    "email": "ines.rod@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Setúbal",
+    "photo": "https://ui-avatars.com/api/?name=Ines+Rodrigues&background=random",
+    "description": "Desenvolvedora Frontend Angular.",
+    "recommendations": {
+      "count": 4,
+      "users": []
+    },
+    "actualArea": "Frontend Developer",
+    "phoneNumber": "912345686",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "HTML",
+      "SASS"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Paciência"
+    ],
+    "hobbies": [
+      "Dança",
+      "Cinema"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000010,
+    "type": "user",
+    "name": "João Neves",
+    "email": "joao.neves@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Joao+Neves&background=random",
+    "description": "Engenheiro de Software C# .NET.",
+    "recommendations": {
+      "count": 10,
+      "users": []
+    },
+    "actualArea": "Backend Developer",
+    "phoneNumber": "912345687",
+    "receivedMessages": [],
+    "hardSkills": [
+      "C#",
+      ".NET Core",
+      "SQL Server",
+      "Azure",
+      "Git"
+    ],
+    "softSkills": [
+      "Trabalho em Equipa",
+      "Foco"
+    ],
+    "hobbies": [
+      "Futebol",
+      "Churrasco"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000011,
+    "type": "user",
+    "name": "Lara Nunes",
+    "email": "lara.n@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Porto",
+    "photo": "https://ui-avatars.com/api/?name=Lara+Nunes&background=random",
+    "description": "Data Analyst com foco em Power BI e SQL.",
+    "recommendations": {
+      "count": 6,
+      "users": []
+    },
+    "actualArea": "Data Analyst",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Power BI",
+      "SQL",
+      "Excel",
+      "Python"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Analítico"
+    ],
+    "hobbies": [
+      "Leitura"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000012,
+    "type": "user",
+    "name": "Miguel Alves",
+    "email": "miguel.a@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Miguel+Alves&background=random",
+    "description": "Security Analyst - Blue Team.",
+    "recommendations": {
+      "count": 14,
+      "users": []
+    },
+    "actualArea": "Cybersecurity Analyst",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Network Security",
+      "SIEM",
+      "Python",
+      "Linux"
+    ],
+    "softSkills": [
+      "Resiliência",
+      "Curiosidade"
+    ],
+    "hobbies": [
+      "CTF",
+      "Gaming"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000013,
+    "type": "user",
+    "name": "Nádia Correia",
+    "email": "nadia.c@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Coimbra",
+    "photo": "https://ui-avatars.com/api/?name=Nadia+Correia&background=random",
+    "description": "Tech Recruiter em busca de talentos.",
+    "recommendations": {
+      "count": 45,
+      "users": []
+    },
+    "actualArea": "Tech Recruiter",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Sourcing",
+      "LinkedIn Recruiter",
+      "Triagem"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Comunicação"
+    ],
+    "hobbies": [
+      "Psicologia",
+      "Viagens"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000014,
+    "type": "user",
+    "name": "Pedro Ramos",
+    "email": "pedro.r@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Braga",
+    "photo": "https://ui-avatars.com/api/?name=Pedro+Ramos&background=random",
+    "description": "Desenvolvedor PHP Laravel.",
+    "recommendations": {
+      "count": 3,
+      "users": []
+    },
+    "actualArea": "Backend Developer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Vue.js"
+    ],
+    "softSkills": [
+      "Autonomia"
+    ],
+    "hobbies": [
+      "Carros"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000015,
+    "type": "user",
+    "name": "Rita Mendes",
+    "email": "rita.m@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Aveiro",
+    "photo": "https://ui-avatars.com/api/?name=Rita+Mendes&background=random",
+    "description": "Estudante de Engenharia Informática.",
+    "recommendations": {
+      "count": 1,
+      "users": []
+    },
+    "actualArea": "Estudante",
+    "receivedMessages": [],
+    "hardSkills": [
+      "C",
+      "Java",
+      "Algoritmos"
+    ],
+    "softSkills": [
+      "Vontade de Aprender"
+    ],
+    "hobbies": [
+      "Séries",
+      "Jogos"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000016,
+    "type": "user",
+    "name": "Sérgio Pinto",
+    "email": "sergio.p@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Funchal",
+    "photo": "https://ui-avatars.com/api/?name=Sergio+Pinto&background=random",
+    "description": "Administrador de Sistemas.",
+    "recommendations": {
+      "count": 9,
+      "users": []
+    },
+    "actualArea": "SysAdmin",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Windows Server",
+      "Linux",
+      "VMware",
+      "Networking"
+    ],
+    "softSkills": [
+      "Resolução de Problemas"
+    ],
+    "hobbies": [
+      "Pesca"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000017,
+    "type": "user",
+    "name": "Tânia Lopes",
+    "email": "tania.l@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Tania+Lopes&background=random",
+    "description": "Marketing Digital e SEO.",
+    "recommendations": {
+      "count": 20,
+      "users": []
+    },
+    "actualArea": "Marketing Specialist",
+    "receivedMessages": [],
+    "hardSkills": [
+      "SEO",
+      "Google Ads",
+      "Analytics",
+      "Copywriting"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Comunicação"
+    ],
+    "hobbies": [
+      "Fotografia",
+      "Instagram"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000018,
+    "type": "user",
+    "name": "Vitor Hugo",
+    "email": "vitor.h@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Porto",
+    "photo": "https://ui-avatars.com/api/?name=Vitor+Hugo&background=random",
+    "description": "Desenvolvedor Android (Kotlin).",
+    "recommendations": {
+      "count": 6,
+      "users": []
+    },
+    "actualArea": "Mobile Developer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Kotlin",
+      "Android Studio",
+      "Jetpack Compose",
+      "Java"
+    ],
+    "softSkills": [
+      "Foco"
+    ],
+    "hobbies": [
+      "Tecnologia"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000019,
+    "type": "user",
+    "name": "Xavier Cruz",
+    "email": "xavier.c@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Guimarães",
+    "photo": "https://ui-avatars.com/api/?name=Xavier+Cruz&background=random",
+    "description": "Arquiteto de Soluções Cloud.",
+    "recommendations": {
+      "count": 28,
+      "users": []
+    },
+    "actualArea": "Solutions Architect",
+    "receivedMessages": [],
+    "hardSkills": [
+      "AWS",
+      "Azure",
+      "Arquitetura de Software",
+      "Microsserviços"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Visão Estratégica"
+    ],
+    "hobbies": [
+      "Leitura Técnica"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000020,
+    "type": "user",
+    "name": "Yara Lima",
+    "email": "yara.l@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Yara+Lima&background=random",
+    "description": "Desenvolvedora Blockchain.",
+    "recommendations": {
+      "count": 11,
+      "users": []
+    },
+    "actualArea": "Blockchain Dev",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Solidity",
+      "Ethereum",
+      "Smart Contracts",
+      "Web3.js"
+    ],
+    "softSkills": [
+      "Inovação"
+    ],
+    "hobbies": [
+      "Criptomoedas"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000021,
+    "type": "user",
+    "name": "Zé Carlos",
+    "email": "ze.carlos@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Albufeira",
+    "photo": "https://ui-avatars.com/api/?name=Ze+Carlos&background=random",
+    "description": "Suporte Técnico e Helpdesk.",
+    "recommendations": {
+      "count": 2,
+      "users": []
+    },
+    "actualArea": "IT Support",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Windows",
+      "Hardware",
+      "Redes",
+      "Office 365"
+    ],
+    "softSkills": [
+      "Paciência",
+      "Comunicação"
+    ],
+    "hobbies": [
+      "Pesca"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000022,
+    "type": "user",
+    "name": "Alice Reis",
+    "email": "alice.r@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Viana do Castelo",
+    "photo": "https://ui-avatars.com/api/?name=Alice+Reis&background=random",
+    "description": "Designer de Interiores migrando para UX.",
+    "recommendations": {
+      "count": 4,
+      "users": []
+    },
+    "actualArea": "Junior UX Designer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "AutoCAD",
+      "Figma",
+      "Sketch"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Estética"
+    ],
+    "hobbies": [
+      "Decoração"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000023,
+    "type": "user",
+    "name": "Bernardo Dias",
+    "email": "bernardo.d@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Coimbra",
+    "photo": "https://ui-avatars.com/api/?name=Bernardo+Dias&background=random",
+    "description": "Engenheiro de Machine Learning.",
+    "recommendations": {
+      "count": 19,
+      "users": []
+    },
+    "actualArea": "ML Engineer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Python",
+      "PyTorch",
+      "MLOps",
+      "Docker"
+    ],
+    "softSkills": [
+      "Matemática",
+      "Lógica"
+    ],
+    "hobbies": [
+      "Xadrez"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000024,
+    "type": "user",
+    "name": "Cátia Viana",
+    "email": "catia.v@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Catia+Viana&background=random",
+    "description": "Gestora de Projetos IT.",
+    "recommendations": {
+      "count": 33,
+      "users": []
+    },
+    "actualArea": "Project Manager",
+    "receivedMessages": [],
+    "hardSkills": [
+      "MS Project",
+      "Jira",
+      "Agile",
+      "Risk Management"
+    ],
+    "softSkills": [
+      "Organização",
+      "Liderança"
+    ],
+    "hobbies": [
+      "Planeamento"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000025,
+    "type": "user",
+    "name": "Diogo Matos",
+    "email": "diogo.m@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Porto",
+    "photo": "https://ui-avatars.com/api/?name=Diogo+Matos&background=random",
+    "description": "Desenvolvedor Ruby on Rails.",
+    "recommendations": {
+      "count": 7,
+      "users": []
+    },
+    "actualArea": "Backend Developer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Ruby",
+      "Rails",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "softSkills": [
+      "Trabalho em Equipa"
+    ],
+    "hobbies": [
+      "Música"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000026,
+    "type": "user",
+    "name": "Elisa Costa",
+    "email": "elisa.c@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Leiria",
+    "photo": "https://ui-avatars.com/api/?name=Elisa+Costa&background=random",
+    "description": "Copywriter Tech e Content Writer.",
+    "recommendations": {
+      "count": 12,
+      "users": []
+    },
+    "actualArea": "Content Writer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "SEO",
+      "WordPress",
+      "Escrita Criativa"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Comunicação"
+    ],
+    "hobbies": [
+      "Leitura"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000027,
+    "type": "user",
+    "name": "Filipe Rocha",
+    "email": "filipe.r@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Faro",
+    "photo": "https://ui-avatars.com/api/?name=Filipe+Rocha&background=random",
+    "description": "Consultor SAP.",
+    "recommendations": {
+      "count": 25,
+      "users": []
+    },
+    "actualArea": "SAP Consultant",
+    "receivedMessages": [],
+    "hardSkills": [
+      "SAP ERP",
+      "ABAP",
+      "HANA"
+    ],
+    "softSkills": [
+      "Consultoria",
+      "Resolução de Problemas"
+    ],
+    "hobbies": [
+      "Viagens"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000028,
+    "type": "user",
+    "name": "Graça Paz",
+    "email": "graca.p@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Évora",
+    "photo": "https://ui-avatars.com/api/?name=Graca+Paz&background=random",
+    "description": "Professora de Informática.",
+    "recommendations": {
+      "count": 50,
+      "users": []
+    },
+    "actualArea": "Professora",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Ensino",
+      "C++",
+      "Algoritmos",
+      "Bases de Dados"
+    ],
+    "softSkills": [
+      "Pedagogia",
+      "Paciência"
+    ],
+    "hobbies": [
+      "Leitura",
+      "Jardinagem"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000029,
+    "type": "user",
+    "name": "Hélio Simões",
+    "email": "helio.s@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Lisboa",
+    "photo": "https://ui-avatars.com/api/?name=Helio+Simoes&background=random",
+    "description": "Game Developer (Unity).",
+    "recommendations": {
+      "count": 16,
+      "users": []
+    },
+    "actualArea": "Game Dev",
+    "receivedMessages": [],
+    "hardSkills": [
+      "C#",
+      "Unity",
+      "3D Modeling",
+      "Blender"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Trabalho sob Pressão"
+    ],
+    "hobbies": [
+      "Gaming",
+      "Cinema"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1765000000030,
+    "type": "user",
+    "name": "Iara Antunes",
+    "email": "iara.a@test.com",
+    "password": "$2b$10$UkVSiNHO26v8iQW4OHgumOSV0qZWLQni8aaotrQh/jRQeFLCsB3.a",
+    "location": "Porto",
+    "photo": "https://ui-avatars.com/api/?name=Iara+Antunes&background=random",
+    "description": "Engenheira de Redes.",
+    "recommendations": {
+      "count": 9,
+      "users": []
+    },
+    "actualArea": "Network Engineer",
+    "receivedMessages": [],
+    "hardSkills": [
+      "Cisco",
+      "CCNA",
+      "Routing",
+      "Switching"
+    ],
+    "softSkills": [
+      "Análise",
+      "Resolução de Problemas"
+    ],
+    "hobbies": [
+      "Caminhadas"
+    ],
+    "academicBackground": [],
+    "experiences": []
+  },
+  {
+    "id": 1763760765413,
     "type": "user",
     "name": "João Pedro",
     "email": "jp.marcilio2@gmail.com",
-    "password": "$2b$10$ev/3urYDrnV7eVpfh3uVjeOGxnhlW87d9t1igsfXbyhToNvs8Xa6q",
-    "location": "São Paulo - SP",
-    "photo": "http://localhost:5002/userImages/1763386859778-blob",
+    "password": "$2b$10$z.rGnfErYfmsCGbBJGWy2ezHq0H8N2FrqJcPXXOyaOOuGTIBKvLu2",
+    "location": "3456789",
+    "photo": "http://localhost:5002/userImages/1763760765269-blob",
     "description": "",
     "recommendations": {
       "count": 0,
       "users": []
     },
-    "receivedMessages": [
-      {
-        "messageId": 1763420835099,
-        "senderId": 1763386859846,
-        "senderType": "user",
-        "timestamp": 1763420835099,
-        "subject": "asdadad",
-        "content": "asdadsdad",
-        "isRead": true
-      },
-      {
-        "messageId": 1763422467291,
-        "senderId": 1763386859846,
-        "senderType": "user",
-        "timestamp": 1763422467291,
-        "subject": "papap",
-        "content": "papapap bom dia",
-        "isRead": true
-      }
-    ],
-    "actualArea": "Engenheiro de Software",
-    "phoneNumber": "11948692771",
+    "receivedMessages": [],
+    "actualArea": "",
+    "phoneNumber": "2345678",
     "hardSkills": [],
     "softSkills": [],
     "hobbies": [],
     "academicBackground": [],
-    "experiences": [],
-    "profilePicture": "http://localhost:5002/userImages/1763386859778-blob"
+    "experiences": []
+  },
+  {
+    "id": 1763774018947,
+    "type": "user",
+    "name": "João Pedro R Marcilio",
+    "email": "jp.marcilio@gmail.com",
+    "password": "$2b$10$Zr1Rw/aoJ6tgIA.4Oks5mumtimO8hQ7IQgKoTCQhQk.xtUZ72YEgy",
+    "location": "São Paulo - SP",
+    "photo": "http://localhost:5002/userImages/1763774018694-blob",
+    "description": "",
+    "recommendations": {
+      "count": 0,
+      "users": []
+    },
+    "receivedMessages": [],
+    "actualArea": "",
+    "phoneNumber": "11948692771",
+    "hardSkills": [
+      "Hard"
+    ],
+    "softSkills": [
+      "Soft"
+    ],
+    "hobbies": [
+      "Hobbie"
+    ],
+    "academicBackground": [
+      {
+        "course": "",
+        "degree": "",
+        "institution": "",
+        "status": "",
+        "startDate": "",
+        "endDate": ""
+      }
+    ],
+    "experiences": [
+      {
+        "role": "",
+        "company": "",
+        "description": "",
+        "startDate": "",
+        "endDate": "",
+        "isCurrent": false
+      }
+    ],
+    "profilePicture": "http://localhost:5002/userImages/1763774018694-blob"
   }
 ]
